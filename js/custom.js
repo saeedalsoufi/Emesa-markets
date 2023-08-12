@@ -221,48 +221,58 @@ function populateAllCategory() {
     });
 
 //Search
-    document.addEventListener("DOMContentLoaded", function() {
-        const searchInput = document.querySelector('.search-product2 input[type="text"]');
-        const suggestionsBox = document.querySelector('.suggestions');
-        const products = document.querySelectorAll('.products-single');
+    
+    function performSearch() {
+    var query = document.getElementById('searchInput').value;
+    if (query) {
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.querySelector('.search-product2 input[type="text"]');
+            const suggestionsBox = document.querySelector('.suggestions');
+            const products = document.querySelectorAll('.products-single');
 
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            suggestionsBox.innerHTML = ''; // Clear previous suggestions
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                suggestionsBox.innerHTML = ''; // Clear previous suggestions
 
-            if (searchTerm) {
+                if (searchTerm) {
+                    products.forEach(product => {
+                        const productName = product.getAttribute('data-product-name').toLowerCase();
+                        if (productName.startsWith(searchTerm)) {
+                            // Create a suggestion item
+                            const suggestionItem = document.createElement('div');
+                            suggestionItem.classList.add('suggestion-item');
+                            suggestionItem.textContent = productName;
+                            suggestionsBox.appendChild(suggestionItem);
+
+                            // Add click event to suggestion item
+                            suggestionItem.addEventListener('click', function() {
+                                searchInput.value = this.textContent;
+                                filterProducts(searchInput.value);
+                                suggestionsBox.innerHTML = ''; // Clear suggestions
+                            });
+                        }
+                    });
+                }
+                filterProducts(searchTerm);
+            });
+        
+        
+                                  
+
+            function filterProducts(term) {
                 products.forEach(product => {
                     const productName = product.getAttribute('data-product-name').toLowerCase();
-                    if (productName.startsWith(searchTerm)) {
-                        // Create a suggestion item
-                        const suggestionItem = document.createElement('div');
-                        suggestionItem.classList.add('suggestion-item');
-                        suggestionItem.textContent = productName;
-                        suggestionsBox.appendChild(suggestionItem);
-
-                        // Add click event to suggestion item
-                        suggestionItem.addEventListener('click', function() {
-                            searchInput.value = this.textContent;
-                            filterProducts(searchInput.value);
-                            suggestionsBox.innerHTML = ''; // Clear suggestions
-                        });
+                    if (!productName.startsWith(term)) {
+                        product.style.display = 'none';
+                    } else {
+                        product.style.display = 'block';
                     }
                 });
             }
-            filterProducts(searchTerm);
         });
-
-        function filterProducts(term) {
-            products.forEach(product => {
-                const productName = product.getAttribute('data-product-name').toLowerCase();
-                if (!productName.startsWith(term)) {
-                    product.style.display = 'none';
-                } else {
-                    product.style.display = 'block';
-                }
-            });
-        }
-    });
+    }
+    }
+    
 
 
     // Quantity functionality
