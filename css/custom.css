@@ -1,0 +1,220 @@
+
+/** ADD YOUR AWESOME CODES HERE **/
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar {
+    background-color: ; /* Replace with your desired color */
+    /* Other styles for the navigation bar */
+}
+
+.img-locate {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+
+
+/* Start Shop Page CSS */
+.shop-box-inner {
+    padding: 30px 0;
+}
+
+.products-single {
+    margin-bottom: 30px;
+}
+
+.box-img-hover {
+    position: relative;
+}
+
+.box-img-hover img {
+    width: 100%;
+    height: auto;
+}
+
+.mask-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.mask-icon:hover {
+    opacity: 1;
+}
+
+.mask-icon ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.mask-icon ul li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.mask-icon ul li a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.why-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.why-text h4 {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.why-text h5 {
+    color: #000; /* Change the color of the price to black */
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent; /* Remove background color */
+}
+
+.product-categorie-box .nav-item:hover,
+.product-categorie-box .nav-item.active {
+    background-color: #4CAF50; /* Green background for active and hovered categories */
+    color: white;
+}
+
+.quantity {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.quantity select {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    appearance: none; /* Remove the default appearance */
+    padding: 5px;
+    cursor: pointer; /* Add a pointer cursor */
+}
+
+.btn.hvr-hover {
+    background-color: #4CAF50; /* Green background for the Add to Cart button */
+    color: #fff; /* White text for the Add to Cart button */
+}
+/* End Shop Page CSS */
+
+
+.search-product2 {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc; /* Add a border around the search container */
+    margin-bottom: 20px; /* Add some margin to move the categories down */
+}
+
+.search-product2 form {
+    display: flex;
+}
+
+.search-product2 input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-product2 button {
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+.search-product2 button:hover {
+    background-color: #388E3C;
+}
+
+/* Additional CSS to move the categories down */
+.nav-tabs {
+    margin-top: 20px; /* Add some margin to the top of the categories */
+}
+
+
+.suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background: #f0f0f0;
+}
+
+.hover-team{
+    width: 100%!important;
+}
+.my-map{
+    width: 100%!important;
+}
+.quantity-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    font-size: 20px;
+    color: #333;
+    margin: 0 10px;
+    font-family: 'Arial', sans-serif; /* You can change the font family to any desired font */
+}
+
+.quantity-arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.quantity-arrow img {
+    width: 25px; /* Increase the size of the buttons */
+    height: 25px;
+}
+
+.tab-pane:not(#nav-all) {
+    padding-top: 20px; /* Adjust this value to create the desired space */
+    padding-right: -80px;
+    margin-right: auto;
+    margin-left: -13px;
+}
+
+
+
