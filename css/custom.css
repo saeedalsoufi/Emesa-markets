@@ -216,5 +216,12 @@
     margin-left: -13px;
 }
 
+.search-results {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
 
 
